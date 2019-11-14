@@ -12,6 +12,12 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-light bg-light justify-content-between">
+      <a class="navbar-brand">The Cocktail web</a>
+        <form class="form-inline">
+          <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-danger" %>
+        </form>
+    </nav>
     <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1560963689-b5682b6440f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1886&q=80);">
       <div class="container">
         <h1>The cocktail web</h1>
@@ -21,5 +27,18 @@
     <%= yield %>
     <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
     <%= javascript_pack_tag "application" %> <!-- from app/javascript/packs/application.js -->
+    <div class="footer">
+      <div class="footer-links">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    <div class="footer-copyright">
+    This footer is made with <i class="fas fa-heart"></i> at The cocktail web
+  </div>
+</div>
+
   </body>
 </html>
