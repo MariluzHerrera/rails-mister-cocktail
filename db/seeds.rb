@@ -12,5 +12,10 @@ Ingredient.create(name: "sugar")
 Ingredient.create(name: "orange peel")
 Ingredient.create(name: "pomegranate")
 Ingredient.create(name: "berries")
+Ingredient.create(name: "gin")
+Ingredient.create(name: "whiskey")
+Ingredient.create(name: "rum")
+Ingredient.create(name: "wine")
+Ingredient.create(name: "tonic")
 
 p Ingredient.all
