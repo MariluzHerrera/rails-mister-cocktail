@@ -1,18 +1,25 @@
-<h1><%= @cocktail.name %></h1>
+<div class="show-container">
+  <div class="card" style="width: 50rem;">
+  <h1><%= @cocktail.name %></h1>
+  <br>
+
+  <%= cl_image_tag @cocktail.photo.key, height: 400, width: 600, crop: :fill %>
+    <br>
+    <% @cocktail.doses.each do |d| %>
+     <ul>
+       <li><h3><%=  d.description %> <%=  d.ingredient.name %>
+      <%= link_to "Delete this dose", dose_path(d), method: :delete, class: "btn btn-primary" %></h3></li>
+      </ul>
+    <% end %>
+  <br>
+  <br>
+
+
+  <%= link_to "Add ingredients/doses", new_cocktail_dose_path(@cocktail), class: "btn btn-success" %>
+</div>
+<br>
 <br>
 
-<%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
-  <% @cocktail.doses.each do |d| %>
-    <h3><%=  d.description %> <%=  d.ingredient.name %>
-    <%= link_to "Delete this dose", dose_path(d), method: :delete, class: "btn btn-primary" %></h3>
-  <% end %>
-<br>
-<br>
 
-
-<%= link_to "Add ingredients/doses", new_cocktail_dose_path(@cocktail), class: "btn btn-success" %>
-
-<br>
-<br>
-
-<%= link_to "Back to list", cocktails_path %>
+</div>
+<%= link_to "Back to list", root_path %>

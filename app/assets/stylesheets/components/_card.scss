@@ -9,3 +9,13 @@
 .card {
   margin: 10px;
 }
+
+.show-container {
+  display: flex;
+  justify-content: center;
+  .card {
+    align-items: center;
+    padding: 20px;
+  }
+}
+
